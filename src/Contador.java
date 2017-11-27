@@ -15,5 +15,14 @@ public class Contador {
 		
 		assertEquals(0, cc.getValor());
 	}
+	
+	@Test
+	public void testVerValorDelContadorConValorInicial5(){
+		ContadorCiruclar cc = new ContadorCircular(5);
+		
+		assertEquals(5, cc.getValor());
+	}
 
 }
+
+   
