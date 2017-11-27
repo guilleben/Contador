@@ -20,6 +20,13 @@ public class Contador {
 		boolean b = this.ccPorDefecto.incrementa();
 		assertFalse(b); 
 	}
+	
+	@Test
+	public void testlimiteSuperadoContadorPorDefecto(){
+		this.ccPorDefecto.incrementa();
+		boolean b = this.ccPorDefecto.incrementa();
+		assertTrue(b); 
+	}
 
 	@Test
 	public void testVerValorDelContadorPorDefecto(){
