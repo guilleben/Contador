@@ -36,7 +36,7 @@ public class ContadorCircular {
 		this.valor+=this.incremento;
 		boolean b = this.valor > this.limite;
 		if (b) {
-			this.valor = this.inicial;
+			this.resetea();
 		}
 		return b;
 		
