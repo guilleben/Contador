@@ -3,6 +3,7 @@ public class ContadorCircular {
 	
 	int valor;
 	int incremento;
+	int limite;
 	
 	
 	
@@ -15,6 +16,10 @@ public class ContadorCircular {
 		this(0, 1);
 	}
 	
+	public ContadorCircular(int limite){
+		this(0, 1);
+		this.limite = limite;
+	}
 
 
 	public Object getValor() {
@@ -22,8 +27,9 @@ public class ContadorCircular {
 		return this.valor;
 	}
 
-	public void incrementa() {
+	public boolean incrementa() {
 		this.valor+=this.incremento;
+		return false;
 		
 	}
 
