@@ -49,7 +49,7 @@ public class Contador {
 	@Test
 	public void testIncrementarContadorDe5A10(){
 		ccCincoEnCinco.incrementa();
-		assertEquals(10, ccCincoEnCinco.getValor());
+		assertEquals(0, ccCincoEnCinco.getValor());
 	}
 	
 	@Test
@@ -63,6 +63,13 @@ public class Contador {
 	public void testContadorPorDefectoVuelveAlValorInicialAlSuperarElLimite(){
 		this.ccPorDefecto.incrementa();
 		this.ccPorDefecto.incrementa();
+		assertEquals(0, this.ccPorDefecto.getValor());
+	}
+	
+	@Test
+	public void testResetearContadorPorDefecto(){
+		this.ccPorDefecto.incrementa();
+		this.ccPorDefecto.resetea();
 		assertEquals(0, this.ccPorDefecto.getValor());
 	}
 }
