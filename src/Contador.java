@@ -18,7 +18,7 @@ public class Contador {
 	
 	@Test
 	public void testVerValorDelContadorConValorInicial5(){
-		ContadorCiruclar cc = new ContadorCircular(5);
+		ContadorCircular cc = new ContadorCircular(5);
 		
 		assertEquals(5, cc.getValor());
 	}
