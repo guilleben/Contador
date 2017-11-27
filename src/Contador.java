@@ -10,9 +10,15 @@ public class Contador {
 
 	@Before
 	public void setUp() throws Exception {
-		ccPorDefecto = new ContadorCircular();
+		ccPorDefecto = new ContadorCircular(1);
 		ccCincoEnCinco = new ContadorCircular(5, 5); 
 		
+	}
+	
+	@Test
+	public void testLimiteNoSuperadoContadorPorDefecto(){
+		boolean b = this.ccPorDefecto.incrementa();
+		assertFalse(b); 
 	}
 
 	@Test
