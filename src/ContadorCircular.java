@@ -42,4 +42,9 @@ public class ContadorCircular {
 		
 	}
 
+	public void resetea() {
+		this.valor = this.inicial; 
+		
+	}
+
 }
