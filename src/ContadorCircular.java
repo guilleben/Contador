@@ -6,19 +6,16 @@ public class ContadorCircular {
 	
 	
 	
-	public ContadorCircular (int i) {
-		this.valor = i;
-		this.incremento = 1;
+	public ContadorCircular (int valor, int incremento) {
+		this.valor = valor;
+		this.incremento = incremento;
 	}
 	
 	public ContadorCircular() {
-		this(0);
+		this(0, 1);
 	}
 	
-	public ContadorCircular(int i, int j){
-		this(i);
-		this.incremento = j;
-	}
+
 
 	public Object getValor() {
 		
