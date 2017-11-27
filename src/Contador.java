@@ -27,6 +27,8 @@ public class Contador {
 		boolean b = this.ccPorDefecto.incrementa();
 		assertTrue(b); 
 	}
+	
+	
 
 	@Test
 	public void testVerValorDelContadorPorDefecto(){
@@ -48,6 +50,20 @@ public class Contador {
 	public void testIncrementarContadorDe5A10(){
 		ccCincoEnCinco.incrementa();
 		assertEquals(10, ccCincoEnCinco.getValor());
+	}
+	
+	@Test
+	public void testLimiteSuperadoContadorDe5En5() {
+		this.ccCincoEnCinco.incrementa();
+		boolean b = this.ccCincoEnCinco.incrementa();
+		assertTrue(b);
+	}
+	
+	@Test 
+	public void testContadorPorDefectoVuelveAlValorInicialAlSuperarElLimite(){
+		this.ccPorDefecto.incrementa();
+		this.ccPorDefecto.incrementa();
+		assertEquals(0, this.ccPorDefecto.getValor());
 	}
 }
 

@@ -5,20 +5,23 @@ public class ContadorCircular {
 	int incremento;
 	int limite;
 	
-	
-	
-	public ContadorCircular (int valor, int incremento) {
+	public ContadorCircular (int valor,  int incremento) {
 		this.valor = valor;
 		this.incremento = incremento;
+		
 	}
 	
-	public ContadorCircular() {
-		this(0, 1);
+	public ContadorCircular (int valor, int incremento, int limite) {
+		this.valor = valor;
+		this.incremento = incremento;
+		this.limite = limite; 
 	}
+	
+	
 	
 	public ContadorCircular(int limite){
-		this(0, 1);
-		this.limite = limite;
+		this(0, 1, limite);
+		
 	}
 
 
