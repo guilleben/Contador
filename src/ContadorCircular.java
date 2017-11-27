@@ -16,4 +16,9 @@ public class ContadorCircular {
 		return this.valor;
 	}
 
+	public void incrementa() {
+		this.valor++;
+		
+	}
+
 }

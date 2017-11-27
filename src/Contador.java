@@ -30,6 +30,14 @@ public class Contador {
 		cc.incrementa();
 		assertEquals(1, cc.getValor());
 	}
+	
+	@Test
+	public void testIncrementarContadorDe5A10(){
+		ContadorCircular cc = new ContadorCircular(5, 5);
+		
+		cc.incrementa();
+		assertEquals(10, cc.getValor());
+	}
 }
 
    
