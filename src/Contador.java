@@ -10,8 +10,10 @@ public class Contador {
 	}
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void testVerValorDelContadorPorDefecto(){
+		ContadorCircular cc = new ContadorCircular();
+		
+		assertEquals(0, cc.getValor());
 	}
 
 }
