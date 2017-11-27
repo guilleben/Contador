@@ -22,7 +22,14 @@ public class Contador {
 		
 		assertEquals(5, cc.getValor());
 	}
-
+	
+	@Test
+	public void testIncrementarContadorPorDefecto() {
+		ContadorCircular cc = new ContadorCircular();
+		
+		cc.incrementa();
+		assertEquals(1, cc.getValor());
+	}
 }
 
    
