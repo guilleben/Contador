@@ -29,7 +29,7 @@ public class ContadorCircular {
 
 	public boolean incrementa() {
 		this.valor+=this.incremento;
-		return false;
+		return this.valor > this.limite;
 		
 	}
 
