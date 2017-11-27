@@ -4,39 +4,37 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class Contador {
+	
+	ContadorCircular ccPorDefecto;
+	ContadorCircular ccCincoEnCinco;
 
 	@Before
 	public void setUp() throws Exception {
+		ccPorDefecto = new ContadorCircular();
+		ccCincoEnCinco = new ContadorCircular(5, 5); 
+		
 	}
 
 	@Test
 	public void testVerValorDelContadorPorDefecto(){
-		ContadorCircular cc = new ContadorCircular();
-		
-		assertEquals(0, cc.getValor());
+		assertEquals(0, ccPorDefecto.getValor());
 	}
 	
 	@Test
 	public void testVerValorDelContadorConValorInicial5(){
-		ContadorCircular cc = new ContadorCircular(5);
-		
-		assertEquals(5, cc.getValor());
+		assertEquals(5, ccCincoEnCinco.getValor());
 	}
 	
 	@Test
 	public void testIncrementarContadorPorDefecto() {
-		ContadorCircular cc = new ContadorCircular();
-		
-		cc.incrementa();
-		assertEquals(1, cc.getValor());
+		ccPorDefecto.incrementa();
+		assertEquals(1, ccPorDefecto.getValor());
 	}
 	
 	@Test
 	public void testIncrementarContadorDe5A10(){
-		ContadorCircular cc = new ContadorCircular(5, 5);
-		
-		cc.incrementa();
-		assertEquals(10, cc.getValor());
+		ccCincoEnCinco.incrementa();
+		assertEquals(10, ccCincoEnCinco.getValor());
 	}
 }
 
